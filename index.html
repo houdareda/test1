@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KRIPA GEL</title>
+
+    <link rel="shortcut icon" href="img/product2.webp" type="image/x-icon" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+
+    <!-- File Css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+  
+      <section class="last_sec">
+  
+        <div class="flexonpc">
+          
+          <div class="div_form">    
+     
+            <div class="div_flex">
+  
+    
+              <form
+                id="form"
+                class="contactUs container-fluid text-center"
+                method="POST"
+                action="https://api.sheetmonkey.io/form/i2QyoSV15YwLHpBGgTXUyh"
+              >
+    
+              <div class="content">
+                <p>ادخـل الاســم</p>
+
+              </div>
+    
+                <div class="container" id="block4">
+                  <div class="f-element">
+                    <input
+                      type="text"
+                      class="form-control custom-field"
+                      name="Name"
+                      id="text"
+                      placeholder="الأسم"
+                      required
+                    />
+                  </div>
+    
+              
+                  <input id="inp_City" type="hidden" name="City" value="" />
+                  <input id="inp_City2" type="hidden" name="continent_code" value="" />
+                  <input id="inp_City3" type="hidden" name="region" value="" />
+                  <input id="inp_City4" type="hidden" name="region_code" value="" />
+                  <input id="inp_City5" type="hidden" name="asn" value="" />
+                  <input id="inp_City6" type="hidden" name="version" value="" />
+
+    
+                  <input
+                    id="redDir"
+                    type="hidden"
+                    name="x-sheetmonkey-redirect"
+                    value="./thanksPage.html"
+                  />
+                  <div class="div-btn">
+                    <button
+                      id="btnSubmit"
+                      class="btn btn-block send-data"
+                      type="submit"
+                    >
+                      <span> اﻃﻠب اﻻن </span>
+                      
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+  
+        </div>
+  
+        
+      </section> 
+
+
+
+    <script>
+      async function getClientLocation() {
+        try {
+          const response = await fetch("https://ipapi.co/json/");
+          const data = await response.json();
+
+          var inp_City = document.getElementById("inp_City");
+          var inp_City2 = document.getElementById("inp_City2");
+          var inp_City3 = document.getElementById("inp_City3");
+          var inp_City4 = document.getElementById("inp_City4");
+          var inp_City5 = document.getElementById("inp_City5");
+          var inp_City6 = document.getElementById("inp_City6");
+
+
+          inp_City.value = `${data.city}`;
+          inp_City2.value = `${data.continent_code}`;
+          inp_City3.value = `${data.region}`;
+          inp_City4.value = `${data.region_code}`;
+          inp_City5.value = `${data.asn}`;
+          inp_City6.value = `${data.version}`;
+
+
+          console.log(inp_City);
+        } catch (error) {
+          console.error("Error fetching location:", error);
+        }
+      }
+
+      getClientLocation();
+    </script>
+
+    <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+        if (e.key == "F12" || (e.ctrlKey && e.shiftKey && e.key == "I") || (e.ctrlKey && e.shiftKey && e.key == "J") || (e.ctrlKey && e.key == "U")) {
+            return false;
+        }
+    }
+</script> 
+
+    <!-- js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

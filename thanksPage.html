@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KRIPA GEL</title>
+
+    <link rel="shortcut icon" href="img/product2.webp" type="image/x-icon" />
+
+    <!-- File Css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="thanks_page_page">
+   
+    <div class="thanks_page">
+        <div class="text">
+            <img src="img/check.png" alt="">
+            <h3>تم تسجيل طلبكم للمنتج بنجاح</h3>
+            <p>سيقوم احد ممثلي خدمة العملاء بالتواصل معك</p>
+            <a href="index.html" class="btn_thanks">الرجوع للموقع</a>
+        </div>
+      
+    </div>
+
+
+
+    <script>
+      async function getClientLocation() {
+        try {
+          const response = await fetch("https://ipapi.co/json/");
+          const data = await response.json();
+
+          var inp_City = document.getElementById("inp_City");
+
+          inp_City.value = `${data.city}`;
+
+          console.log(inp_City);
+        } catch (error) {
+          console.error("Error fetching location:", error);
+        }
+      }
+
+      getClientLocation();
+    </script>
+
+    <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+        if (e.key == "F12" || (e.ctrlKey && e.shiftKey && e.key == "I") || (e.ctrlKey && e.shiftKey && e.key == "J") || (e.ctrlKey && e.key == "U")) {
+            return false;
+        }
+    }
+</script> 
+
+    <!-- js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
